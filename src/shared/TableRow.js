@@ -2,9 +2,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { URL_SERVER } from "./config";
-import axios from 'axios';
+import axios from 'axios/index';
 import Notifications, { notify } from 'react-notify-toast';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome/index";
 
 const toastColor = {
     background: '#505050',
@@ -17,7 +17,6 @@ class TableRow extends Component {
         super(props);
         this.toast = notify.createShowQueue();
         this.onDelete = this.onDelete.bind(this);
-        console.log(this.props);
     }
 
     onDelete() {
@@ -40,7 +39,7 @@ class TableRow extends Component {
                 <td>{ this.props.obj.cost }</td>
                 <td>{ this.props.obj.count }</td>
                 <td>{ this.props.obj.date }</td>
-                <td className="text-center"><a href={this.props.obj.img}><FontAwesomeIcon icon="image" /></a></td>
+                <td className="text-center"><a href={this.props.obj.img} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon="image" /></a></td>
                 <td className="text-center">
                     <Link to={'/edit/'+this.props.obj.code} className="btn btn-outline-dark p-2 mr-2 btn-sm">
                         <FontAwesomeIcon icon="edit" />
