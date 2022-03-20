@@ -1,6 +1,6 @@
 # reactjs-products
 
-This client app is a product store built in React.js, it's a product CRUD. It's client app is called [nestjs-products](https://github.com/eavelasquez/nestjs-products)
+This client app is a product store built in React.js, it's a product CRUD, it also allows uploading images. It's server app is called [nestjs-products](https://github.com/eavelasquez/nestjs-products)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
